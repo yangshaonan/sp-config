@@ -3,6 +3,7 @@ package com.eddy.user.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import com.eddy.pojo.User;
@@ -14,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
+@RefreshScope
 public class UserServiceImpl implements UserService {
 
 	@Value("${sp.user-service.users}")
